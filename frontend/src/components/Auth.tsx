@@ -41,7 +41,7 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
         <div className="w-1/2">
           <div className="px-10">
             <div className="font-serif text-4xl font-bold text-center">
-              {type === "signup" ? "Create Profile" : "Enter Dashboard"}
+              {type === "signup" ? "SignUp" : "SignIn"}
             </div>
             <div className="mt-1 text-slate-400 text-center">
               {type === "signup" ? "Already have an account?" : "Don't have an account?"}{" "}
@@ -91,9 +91,9 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
                   {loading ? (
                     <Loader />
                   ) : type === "signup" ? (
-                    "Sign up"
+                    "sign up"
                   ) : (
-                    "Sign in"
+                    "sign in"
                   )}
                 </span>
               </span>
