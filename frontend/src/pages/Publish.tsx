@@ -1,6 +1,5 @@
 import axios from "axios";
 import { Appbar } from "../components/Appbar";
-import { BACKEND_URL } from "../config";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "../components/Loader";
@@ -16,7 +15,7 @@ export const Publish = () => {
     setIsLoading(true);
     try {
       const res = await axios.post(
-        `${BACKEND_URL}/api/v1/blog`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/v1/blog`,
         {
           title,
           content,
@@ -27,10 +26,10 @@ export const Publish = () => {
           },
         }
       );
-      toast.success("Blog published successfully"); 
+      toast.success("Blog published successfully");
       navigate(`/blog/${res.data.id}`);
     } catch (err) {
-      toast.error("Failed to publish the blog"); 
+      toast.error("Failed to publish the blog");
     } finally {
       setIsLoading(false);
     }

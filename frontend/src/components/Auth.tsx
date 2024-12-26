@@ -4,8 +4,6 @@ import { ChangeEvent, useState } from "react";
 
 import axios from "axios";
 import Loader from "./Loader";
-
-import { BACKEND_URL } from "../config";
 import { toast } from "react-hot-toast";
 
 export const Auth = ({ type }: { type: "signup" | "signin" }) => {
@@ -21,7 +19,9 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
     setLoading(true);
     try {
       const res = await axios.post(
-        `${BACKEND_URL}/api/v1/user/${type === "signup" ? "signup" : "signin"}`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/v1/user/${
+          type === "signup" ? "signup" : "signin"
+        }`,
         postInputs
       );
       const jwt = res.data.jwt;
@@ -44,9 +44,7 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
               {type === "signup" ? "SignUp" : "SignIn"}
             </div>
             <div className="mt-1 text-slate-400 text-center">
-              {type === "signup"
-                ? "Existing user?"
-                : "Don't have an account?"}{" "}
+              {type === "signup" ? "Existing user?" : "Don't have an account?"}{" "}
               <Link
                 className="font-semibold underline text-black"
                 to={type === "signup" ? "/signin" : "/signup"}
