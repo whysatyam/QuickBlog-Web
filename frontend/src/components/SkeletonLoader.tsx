@@ -4,8 +4,7 @@ export const SkeletonLoader = () => {
       <div className="mt-20 flex justify-start ml-20">
         <div
           role="status"
-          className="space-y-2.5 animate-pulse w-1/2 max-w-3xl"
-        >
+          className="space-y-2.5 animate-pulse w-1/2 max-w-3xl">
           <div className="flex items-center w-full">
             <div className="h-2.5 bg-gray-200 rounded-full w-60"></div>
             <div className="h-2.5 ms-2 bg-gray-300 rounded-full  w-24"></div>

@@ -7,13 +7,13 @@ export const BlogSkeleton = () => {
 
           <div className=" bg-gray-200 rounded-full w-20 h-5 max-w-[200px] mb-2.5"></div>
 
-          <div className="h-2 bg-gray-200 rounded-full  max-w-[330px] mb-2.5"></div>
+          <div className="h-2 bg-gray-200 rounded-full max-w-[330px] mb-2.5"></div>
         </div>
-        <div className="h-2 bg-gray-200 rounded-full   mb-2.5"></div>
+        <div className="h-2 bg-gray-200 rounded-full mb-2.5"></div>
         <div className="font-light text-md">
-          <div className="h-2 bg-gray-200 rounded-full   mb-2.5"></div>
+          <div className="h-2 bg-gray-200 rounded-full mb-2.5"></div>
         </div>
-        <div className="h-2 bg-gray-200 rounded-full w-full   mb-2.5"></div>
+        <div className="h-2 bg-gray-200 rounded-full w-full mb-2.5"></div>
         <div className="h-2 bg-gray-200 rounded-full w-full mb-2.5"></div>
       </div>
       <span className="sr-only">Loading</span>
